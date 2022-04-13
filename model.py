@@ -5,6 +5,7 @@ from sklearn.datasets import fetch_california_housing
 # from sklearn.tree import DecisionTreeRegressor
 # from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+from sklearn.externals import joblib
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import pickle
 from xgboost import XGBRegressor
@@ -55,14 +56,14 @@ model.fit(train_scaled, y_train)
 y_pred = model.predict(test_scaled)
 
 # y_pred = scaler.inverse_transform(y_pred_scaled)
-print(y_pred[:5])
+# print(y_pred[:5])
 # Scoring the model
 score_train = model.score(train_scaled, y_train)
 score_test = model.score(test_scaled, y_test)
 
 # if score_train-score_test < 0.05:
 with open("C:\\Users\\cogni\\Downloads\\iGyan\\heroku-ml-deploy\\saved_model\\model.pkl", 'wb') as f:
-    pickle.dump(model, f)
+    joblib.dump(model, f)
 
 error = mean_squared_error(y_true=y_test, y_pred=y_pred)
 print(score_train, '\n', score_test, '\n', error)
