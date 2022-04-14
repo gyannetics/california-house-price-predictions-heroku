@@ -1,0 +1,6 @@
+pandas
+streamlit
+numpy
+sklearn
+xgboost
+Flask

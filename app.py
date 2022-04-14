@@ -18,9 +18,9 @@ def prediction():
         try:
             json = request.json
             prediction = list(model.predict(DataFrame(json)))
-            return jsonify({'prediction': str(prediction)})    
+            return render_template('submit.html', prediction=prediction)#jsonify({'prediction': str(prediction)})    
         except Exception as e:
-            return jsonify({'trace': traceback.format_exc()})
+            return render_template('submit.html', prediction=prediction)#jsonify({'trace': traceback.format_exc()})
      #render_template('submit.html', prediction=prediction)
 
 # @app.route('/submit', methods=['POST'])

@@ -5,9 +5,8 @@ from sklearn.datasets import fetch_california_housing
 # from sklearn.tree import DecisionTreeRegressor
 # from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-from sklearn.externals import joblib
+import joblib
 from sklearn.metrics import mean_squared_error, mean_absolute_error
-import pickle
 from xgboost import XGBRegressor
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 import warnings; warnings.filterwarnings("ignore", category=FutureWarning)
@@ -16,7 +15,7 @@ import warnings; warnings.filterwarnings("ignore", category=FutureWarning)
 X, y = fetch_california_housing(return_X_y=True, as_frame=True)
 
 # df = pd.concat([X,y], axis=1)
-# print(df.head())
+print(X[:5])
 # X = X.values; y= y.values
 
 # Preparing the model for training

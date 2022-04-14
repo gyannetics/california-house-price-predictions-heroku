@@ -9,18 +9,27 @@
 <body>
     <h1>Model Deployment</h1>
     <p>
-        Whats your score?
+        How much does your house cost in California?
     </p>
     <form action="/submit" method="POST"> 
-        <input type="number" name="MedInc" placeholder="median income in block group">
-        <input type="number" name="HouseAge" placeholder="median house age in block group">
-        <input type="number" name="AveRooms" placeholder="average number of rooms per household">
-        <input type="number" name="AveBedrms" placeholder="average number of bedrooms per household">
-        <input type="number" name="Population" placeholder="Block group Population">
-        <input type="number" name="AveOccup" placeholder="average number of household members">
-        <input type="number" name="Latitude" placeholder="Latitude">
-        <input type="number" name="Longitude" placeholder="Longitude">
-        
+        <label for="MedInc">Income:</label>
+            <input type="text" name="MedInc" placeholder="Income in block group"></br>
+        <label for="HouseAge">House Age:</label>
+            <input type="text" name="HouseAge" placeholder="House age in block group"></br>
+        <label for="AveRooms">Rooms per Household:</label>
+            <input type="text" name="AveRooms" placeholder="Number of rooms per household"></br>
+        <label for="AveBedrms">Bedrooms per household:</label>
+            <input type="text" name="AveBedrms" placeholder="Number of bedrooms per household"></br>
+        <label for="Population">Populatio:</label>    
+            <input type="text" name="Population" placeholder="Block group Population"></br>
+        <label for="AveOccup">Members in household:</label>
+            <input type="text" name="AveOccup" placeholder="Number of household members"></br>
+        <label for="Latitude">Latitude:</label>
+            <input type="text" name="Latitude" placeholder="Latitude"></br>
+        <label for="Longitude">Longitude:</label>
+            <input type="text" name="Longitude" placeholder="Longitude"></br>
+        <!-- <label for="file">File:</label> 
+            <input type="file" name="File to upload" id="fileid"></br> -->
         <input type="submit">
     </form>
 </body>
